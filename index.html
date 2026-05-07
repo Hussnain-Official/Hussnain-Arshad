@@ -5,34 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hussnain Arshad | Web Developer Portfolio</title>
+    <title>Hussnain Arshad - Portfolio</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Hussnain Arshad - Modern web developer portfolio showcasing HTML, CSS, JavaScript projects and creative UI designs.">
+    <meta name="description" content="Hussnain Arshad - Portfolio showcasing web development projects, skills, and creative work in HTML, CSS, and design.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Hussnain Arshad">
 
-    <meta property="og:title" content="Hussnain Arshad Portfolio">
-    <meta property="og:description" content="Modern web development portfolio showcasing creative projects and skills.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hussnainarshad.netlify.app">
-
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- AOS ANIMATION -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         body {
             background-color: #050505;
-            color: white;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .glass-card {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
@@ -40,24 +53,22 @@
 <body>
 
 <!-- NAV -->
-<nav class="fixed w-full z-50 bg-black/70 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-        <h1 class="font-bold">Hussnain<span class="text-blue-500">.</span></h1>
+<nav class="fixed w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Hussnain<span class="text-blue-500">.</span></a>
     </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" data-aos="fade-up" class="min-h-screen flex items-center justify-center text-center px-6">
-
-    <div>
+<section class="min-h-screen flex items-center justify-center">
+    <div class="text-center px-6">
         <h1 class="text-5xl font-bold">Hussnain Arshad</h1>
 
-        <p class="text-gray-400 mt-4 max-w-xl mx-auto">
-            I am a passionate student currently exploring web development, design, and technology.
+        <p class="text-gray-400 mt-4 text-lg">
+            I am a passionate student currently exploring web development, design, and technology. I enjoy building creative projects and learning new skills every day.
         </p>
 
-        <img src="assets/hero_pic.jpg"
-            alt="Hussnain Arshad"
+        <img src="assets/hero_pic.jpg" alt="Hussnain Arshad Profile Picture"
             class="w-40 h-40 mx-auto mt-6 rounded-full object-cover">
 
         <div class="mt-6 flex gap-4 justify-center">
@@ -65,53 +76,45 @@
             <a href="#contact" class="px-6 py-2 border rounded-full">Contact</a>
         </div>
     </div>
-
 </section>
 
 <!-- ABOUT -->
-<section id="about" data-aos="fade-right" class="py-20 text-center px-6">
-
+<section id="about" class="py-20 text-center px-6">
     <h2 class="text-3xl font-bold mb-6">About Me</h2>
 
-    <p class="max-w-2xl mx-auto text-gray-300">
-        I am a motivated student learning modern web development, UI design, and problem solving skills to build creative digital experiences.
-    </p>
-
+    <div class="glass-card p-6 rounded-xl max-w-2xl mx-auto">
+        I am a motivated student currently learning modern technologies like web development, UI design and problem solving.
+    </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" data-aos="zoom-in" class="py-20 text-center">
-
-    <h2 class="text-3xl font-bold mb-10">Skills & Tools</h2>
+<section id="skills" class="py-20 text-center">
+    <h2 class="text-3xl font-bold mb-10">My Skills & Learning Tools</h2>
 
     <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto px-6">
 
-        <div class="p-6 bg-white/10 rounded-xl">HTML & CSS</div>
-        <div class="p-6 bg-white/10 rounded-xl">Canva Design</div>
-        <div class="p-6 bg-white/10 rounded-xl">Web Research</div>
+        <div class="glass-card p-6 rounded-xl">HTML & CSS</div>
+        <div class="glass-card p-6 rounded-xl">Canva Design</div>
+        <div class="glass-card p-6 rounded-xl">Web Research</div>
 
     </div>
-
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" data-aos="fade-up" class="py-20 text-center">
-
-    <h2 class="text-3xl font-bold mb-10">Projects</h2>
+<section id="projects" class="py-20 text-center">
+    <h2 class="text-3xl font-bold mb-10">My Projects</h2>
 
     <div class="grid md:grid-cols-3 gap-6 px-6">
 
-        <div class="p-6 bg-white/10 rounded-xl">Personal Website</div>
-        <div class="p-6 bg-white/10 rounded-xl">Landing Page</div>
-        <div class="p-6 bg-white/10 rounded-xl">UI Practice</div>
+        <div class="glass-card p-6 rounded-xl">Personal Website</div>
+        <div class="glass-card p-6 rounded-xl">Landing Page Design</div>
+        <div class="glass-card p-6 rounded-xl">UI Practice Project</div>
 
     </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 text-center" data-aos="fade-up">
-
+<section id="contact" class="py-20 text-center">
     <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
 
     <p class="text-gray-400 mb-6">
@@ -122,21 +125,11 @@
         class="px-6 py-3 bg-white text-black rounded-full font-bold">
         Send Email
     </a>
-
 </section>
 
 <footer class="text-center py-10 text-gray-500">
     © 2026 Hussnain Arshad
 </footer>
 
-<!-- AOS SCRIPT -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 800,
-        once: true
-    });
-</script>
-
 </body>
-</html>
+            </html>
